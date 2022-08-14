@@ -6,7 +6,7 @@ import { useState, useRef, useEffect } from 'react'
 import { Loading } from '../components/Loading'
 
 export default function Home() {
-  let API = 'https://api.github.com/users/octocat'
+  let API = 'https://api.github.com/users/gulsenkeskin'
 
   const userRef = useRef<HTMLInputElement>(null);
   const [userName, setUserName] = useState('')
@@ -28,6 +28,7 @@ export default function Home() {
     fetch(API)
       .then((res) => res.json())
       .then((data) => {
+        console.log(data.avatar_url)
         setData(data)
         setLoading(false)
       })
