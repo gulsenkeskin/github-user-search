@@ -28,7 +28,7 @@ export default function Home() {
     fetch(API)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.avatar_url)
+        console.log(data)
         setData(data)
         setLoading(false)
       })
